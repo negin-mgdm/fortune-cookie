@@ -22,3 +22,21 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+.fortune-cookie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.fortune-cookie img {
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fortune-cookie img:active {
+  transform: scale(0.95);
+}
