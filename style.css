@@ -60,3 +60,20 @@ h1 {
   max-width: 90%;
   width: auto;
 }
+
+#try-another {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#try-another:hover {
+  background-color: #ff4b4b;
+}
