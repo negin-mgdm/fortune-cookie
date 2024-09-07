@@ -9,3 +9,9 @@ const fortunes = [
     "A new perspective will come with the new year.",
     "Someone is looking up to you. Don't let them down."
 ];
+
+// Function to get a random fortune
+function getFortune() {
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    return fortunes[randomIndex];
+}
