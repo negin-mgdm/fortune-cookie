@@ -29,4 +29,20 @@ function showFortune() {
 
 document.getElementById('cookie').addEventListener('click', showFortune);
 
+// Function to animate the pop-up box
+function animatePopup(callback) {
+    const fortuneMessageDiv = document.querySelector('.fortune-message');
+    fortuneMessageDiv.style.display = 'block';
+    fortuneMessageDiv.style.width = 'auto';
+
+    fortuneMessageDiv.style.transform = 'translate(-50%, -50%) scale(0)';
+
+    setTimeout(() => {
+        fortuneMessageDiv.style.transition = 'transform 0.5s ease-out';
+        fortuneMessageDiv.style.transform = 'translate(-50%, -50%) scale(1)';
+        setTimeout(() => {
+            if (callback) callback();
+        }, 500);
+    }, 10);
+}
 
