@@ -46,3 +46,23 @@ function animatePopup(callback) {
     }, 10);
 }
 
+// Function to display the fortune message with animation
+function animateFortuneMessage(fortune, callback) {
+    const fortuneEl = document.getElementById('fortune');
+    let currentText = '';
+    let index = 0;
+
+    function typeCharacter() {
+        if (index < fortune.length) {
+            currentText += fortune.charAt(index);
+            fortuneEl.textContent = currentText;
+            index++;
+            setTimeout(typeCharacter, 100);
+        } else {
+            if (callback) callback();
+        }
+    }
+
+    typeCharacter();
+}
+
