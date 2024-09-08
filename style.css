@@ -30,6 +30,12 @@ h1 {
   width: 100%;
 }
 
+.fortune-cookie {
+  width: 70%;
+  max-width: 600px;
+  position: relative;
+}
+
 .fortune-cookie img {
   width: 250px;
   height: auto;
