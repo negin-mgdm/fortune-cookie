@@ -15,3 +15,18 @@ function getFortune() {
     const randomIndex = Math.floor(Math.random() * fortunes.length);
     return fortunes[randomIndex];
 }
+
+// Function to handle the fortune cookie click event
+function showFortune() {
+    const cookieImage = document.getElementById('cookie');
+
+    cookieImage.removeEventListener('click', showFortune);
+
+    cookieImage.src = 'broken-cookie.png';
+
+    const fortune = getFortune();
+}
+
+document.getElementById('cookie').addEventListener('click', showFortune);
+
+
