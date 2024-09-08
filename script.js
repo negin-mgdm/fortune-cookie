@@ -25,6 +25,16 @@ function showFortune() {
     cookieImage.src = 'broken-cookie.png';
 
     const fortune = getFortune();
+
+    // Animate the popup and then display the fortune message
+    animatePopup(() => {
+        animateFortuneMessage(fortune, () => {
+
+            cookieImage.addEventListener('click', showFortune);
+
+            setTimeout(showTryAnotherButton, 1000);
+        });
+    });
 }
 
 document.getElementById('cookie').addEventListener('click', showFortune);
@@ -64,5 +74,16 @@ function animateFortuneMessage(fortune, callback) {
     }
 
     typeCharacter();
+}
+
+// Function to adjust the font size dynamically
+function adjustFontSize(element) {
+    let fontSize = 1.2;
+    element.style.fontSize = `${fontSize}em`;
+
+    while (element.scrollWidth > element.clientWidth && fontSize > 0.5) {
+        fontSize -= 0.1;
+        element.style.fontSize = `${fontSize}em`;
+    }
 }
 
