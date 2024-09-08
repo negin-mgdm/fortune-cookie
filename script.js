@@ -87,3 +87,14 @@ function adjustFontSize(element) {
     }
 }
 
+// Function to show the "Try another!" button
+function showTryAnotherButton() {
+    const tryAnotherButton = document.getElementById('try-another');
+    tryAnotherButton.style.display = 'block';
+
+    tryAnotherButton.addEventListener('click', () => {
+
+        location.reload();
+    });
+}
+
