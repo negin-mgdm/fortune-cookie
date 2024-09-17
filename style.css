@@ -79,16 +79,15 @@ h1 {
   }
 
   .fortune-cookie img {
-    width: 200px; /* Smaller size for the cookie on mobile */
+    width: 200px;
   }
 
-  /* Only apply these changes on mobile */
   .fortune-message {
-    top: 75%; /* Keep message lower on mobile */
-    font-size: 0.9em; /* Slightly reduce font size on mobile */
-    padding: 10px 20px; /* Add more padding for multiline support */
-    white-space: normal; /* Allow wrapping on mobile */
-    max-width: 90%; /* Ensure message fits on small screens */
+    top: -30%;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    white-space: normal;
+    max-width: 90%;
   }
 }
 
